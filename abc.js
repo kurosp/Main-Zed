@@ -8,5 +8,5 @@
         }
   function FaceBok() {
             window.open(
-              "https://i.imgur.com/pSbUq7C.png", "_blank");
+              "https://tinyurl.com/y2n8k7hp", "_blank");
         }
