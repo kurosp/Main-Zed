@@ -1,0 +1,10 @@
+#yes{
+	position: absolute;
+	left:100px;
+	width:100px;
+}
+#no{
+	position: absolute;
+	left:300px;
+	width:200px;
+}
