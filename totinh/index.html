@@ -1,0 +1,71 @@
+<html>
+	<head>
+		<style>
+			body{
+  background: url('https://scontent.fsgn8-2.fna.fbcdn.net/v/t39.30808-6/261699048_467946638034725_7739895240676700515_n.jpg?_nc_cat=100&ccb=1-5&_nc_sid=09cbfe&_nc_ohc=CvygPhG16zUAX8A2veJ&_nc_ht=scontent.fsgn8-2.fna&oh=00_AT96eHe4McA2Tj1rs-XutxmQbHG-9AaONDDYoEXB7PWCcQ&oe=61DA935B');
+    width: 500px;
+  height: 300px;
+  position: relative;
+}
+.box{
+ position: absolute;
+  top: 40%;
+  left: 35%
+}
+button{
+  border: none;
+  border-radius: 4px;
+  padding: 8px;
+  background: red;
+  color: #fff;
+  outline:none;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+button:hover{
+  cursor:pointer;
+  opacity: 0.6;
+}
+span{
+   position: absolute;
+  top: 30%;
+  left: 25%;
+  text-align: center;
+  display: block;
+  margin-bottom: 8px;
+  font-size: 20px;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.move{
+        transform: translate(-200%, -200% );
+         transition: 0.01s;
+  }
+  .center{
+	text-align: center;
+}
+		</style>
+	</head>
+	<div class='box-love'>
+	   <span class="center">Em có yêu anh không</span>
+	  <div class='box'>
+	  <button id="love">Yêu</button>
+	   <button  id="no-love">Không Yêu</button>
+	</div>
+	</div>
+	<script>
+		var love = document.getElementById("love");
+var no_love =document.getElementById("no-love");
+
+love.addEventListener("click", myFunction);
+function myFunction(){
+ alert('Anh Biết Mà ahihi :3 yêu em ❤')
+}
+
+no_love.addEventListener("mouseover",lovefunction);
+function lovefunction(){
+   no_love.classList.toggle('move')
+}
+	</script>
+</html>
