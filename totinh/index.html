@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div style="margin-bottom: 20px;">
+        <button id="encode">Encode</button>
+        <button id="decode">Decode</button>
+    </div>
+    <textarea name="" id="" cols="30" rows="10"></textarea>
+    <script>
+let encode = document.querySelector('#encode');
+let decode = document.querySelector('#decode');
+let output = document.querySelector('textarea');
+encode.addEventListener('click', () =>{
+   output.value = btoa(output.value) ;
+});
+decode.addEventListener('click', () =>{
+    output.value = atob(output.value) ;
+});
+	</script>
+</body>
+</html>
