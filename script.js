@@ -362,3 +362,25 @@ function loop(){
     requestAnimationFrame(loop);
 }
 loop();
+// Thêm sự kiện lắng nghe khi người dùng nhấn phím xuống
+document.addEventListener("keydown", function(event) {
+    // Kiểm tra nếu phím được nhấn là phím cách (Spacebar)
+    if (event.code === "Space" || event.key === " ") {
+        // Kiểm tra trạng thái hiện tại của trò chơi
+        if (state.current === state.game) {
+            // Thực hiện hành động nhảy của chim
+            bird.flap();
+            FLAP.play();
+        } else if (state.current === state.getReady) {
+            // Chuyển trạng thái từ getReady sang game và phát âm thanh
+            state.current = state.game;
+            SWOOSHING.play();
+        } else if (state.current === state.over) {
+            // Reset trò chơi khi trạng thái là over và người chơi nhấn phím Space
+            pipes.reset();
+            bird.speedReset();
+            score.reset();
+            state.current = state.getReady;
+        }
+    }
+});
