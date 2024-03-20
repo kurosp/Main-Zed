@@ -363,9 +363,11 @@ function loop(){
 }
 loop();
 // Thêm sự kiện lắng nghe khi người dùng nhấn phím xuống
-document.addEventListener("keydown", function(event) {
+window.addEventListener("keydown", function(event) {
     // Kiểm tra nếu phím được nhấn là phím cách (Spacebar)
     if (event.code === "Space" || event.key === " ") {
+        event.preventDefault(); // Ngăn chặn hành vi mặc định của trình duyệt
+
         // Kiểm tra trạng thái hiện tại của trò chơi
         if (state.current === state.game) {
             // Thực hiện hành động nhảy của chim
@@ -384,3 +386,4 @@ document.addEventListener("keydown", function(event) {
         }
     }
 });
+
